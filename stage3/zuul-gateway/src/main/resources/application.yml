@@ -1,0 +1,23 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+server:
+  port: 8007
+spring:
+  application:
+    name: zuul-gateway
+zuul:
+  routes:
+    client:
+#根据不同的前缀，转发到不同的服务
+      path: /client/**
+#对应服务的application name
+      serviceId: eureka-client
+      sensitive-headers:
+      strip-prefix: false
+    client2:
+      path: /client2/**
+      serviceId: eureka-client2
+      sensitive-headers:
+      strip-prefix: false
