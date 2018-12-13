@@ -14,6 +14,7 @@
 	</parent>
 	<modules>
 		<module>config-server</module>
+		<module>config-client</module>
 	</modules>
 	<build>
 		<plugins>
