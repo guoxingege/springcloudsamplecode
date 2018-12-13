@@ -1,0 +1,36 @@
+       
+server:
+  port: 8008
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+spring: 
+  application:  
+    name: config-server
+  cloud:  
+    config: 
+      server: 
+        git:
+#git地址
+          uri: https://github.com/guoxingege/remote_config
+#查找的路径
+          search-paths: properties
+
+#          default-label: master
+#账号 git仓库为public,读取不需要账号密码
+          username: 
+#密码
+          password: 
+          default-label: master
+          
+#对应的branch
+      label: master
+#/{application}/{profile}[/{label}]
+#/{application}-{profile}.yml
+#/{application}-{profile}.properties
+#/{label}/{application}-{profile}.yml 
+#/{label}/{application}-{profile}.properties
+#[label]是可以省略的，默认label是master分支
+#访问http://localhost:8008/starguo/dev
+#显示{"name":"starguo","profiles":["dev"],"label":null,"version":"1fefe71801d400e9f8fdf59db5e821f94e4055e2","state":null,"propertySources":[]}

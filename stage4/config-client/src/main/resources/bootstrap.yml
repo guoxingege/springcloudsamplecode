@@ -1,0 +1,18 @@
+spring: 
+  application:  
+    name: config-client
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8008/
+#此配置可以指定文件名,默认根据application name 打开,本例来说,默认读取的是config-client-dev.yml/properties
+      name: config,config-client
+      
+server: 
+  port: 8009
+  
+eureka: 
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
