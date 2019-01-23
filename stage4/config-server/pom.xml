@@ -7,7 +7,7 @@
 		<groupId>com.star.guo</groupId>
 		<artifactId>stage4</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<!-- <relativePath /> lookup parent from repository -->
 	</parent>
 	<!-- <groupId>com.star.guo</groupId> -->
 	<artifactId>config-server</artifactId>
@@ -35,6 +35,11 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>
+
 	</dependencies>
 
 
