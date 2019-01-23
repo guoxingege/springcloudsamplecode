@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: config-client
+  cloud: 
+    config: 
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+
+    bus: 
+      enabled: true
+      trace: 
+        enabled: true
+  rabbitmq: 
+    host: localhost
+    port: 5672
+    username: guoxingege
+    password: 123456
+    virtual-host: /
+#spring.cloud.config.uri= http://localhost:8888/
+
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://103.45.109.28:8000/eureka/
+
+server:
+  port: 8011
+
+    
+management:
+  endpoints: 
+    web:
+      exposure: 
+        include: bus-refresh
+
+
+
