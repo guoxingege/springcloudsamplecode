@@ -13,7 +13,8 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<modules>
-
+		<module>springcloudbus</module>
+		<module>springcloudbus2</module>
 	</modules>
 	<build>
 		<plugins>
