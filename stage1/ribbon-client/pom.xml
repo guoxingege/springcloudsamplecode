@@ -8,7 +8,7 @@
 <!-- 		<artifactId>springcloudversion</artifactId> -->
 		<artifactId>stage1</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath /> <!-- lookup parent from repository -->
+<!-- 		<relativePath /> lookup parent from repository -->
 	</parent>
 	<!-- <groupId>com.star.guo</groupId> -->
 	<artifactId>ribbon-client</artifactId>
